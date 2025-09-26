@@ -75,55 +75,33 @@ For us this project was about learning how to build the basics of a MERN project
 Before you begin, ensure you have the following installed on your system:
 - [Node.js](https://nodejs.org/) (v16 or higher)
 - [npm](https://www.npmjs.com/) (comes with Node.js)
+- [Docker](https://docs.docker.com/get-started/get-docker/) (Docker Desktop for Windows)
 - [MongoDB](https://www.mongodb.com/try/download/community) (or a MongoDB Atlas account)
   - Create a MongoDB account and create a cluster
   - Create a user and get the connection string
 - [RAWG api key](https://rawg.io/login?forward=developer) Create a RAWG account, and request an api key
 
-### Installation
+### Setup
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/CodecoolGlobal/freestyle-mern-project-react-polobence.git
-   cd freestyle-mern-project-react-polobence
+   git clone https://github.com/GecseD/gamers-wish-vault.git
+   cd gamers-wish-vault
    ```
 
-2. **Set up backend**
-
- - ```bash
-   cd server
-   npm install
-   ```
-
-3. **Configure environment variables**
-   - Create a config.js file in the server directory
-   - Copy the contents from config_template.js to config.js
+2. **Configure environment variables**
+   - Copy the contents from .env.example to .env
    - Fill in your MongoDB credentials and API key
-
-4. **Setup frontend**
-  - ```bash
-    cd client
-    npm install
-    ```
 
 ### Running the Application
 
-1. **Start the backend**
-- from a new terminal
+1. **Run the start script**
    ```bash
-   cd server
-   npm run dev
-   ```
-
-2. **Start the frontend**
-- from another terminal
-   ```bash
-   cd client
-   npm run dev
+   ./start.sh
    ```
    
-3. **Access the Application**
-- Open your browser and navigate to http://localhost:5173
+2. **Access the Application**
+- Open your browser and navigate to http://localhost:80
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
