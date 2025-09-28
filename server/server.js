@@ -1,7 +1,7 @@
 import express from "express";
 import mongoose from "mongoose";
 import bcrypt from "bcrypt";
-import UserModel from "./model/User.model.js";
+import UserModel from "./model/user.model.js";
 import { fetchGameById, fetchGames, fetchGameWithFilters } from "./utilities/fetchGames.js";
 import { checkIfNewGame } from "./utilities/checkIfNewGame.js";
 import { MONGO_DB_CLUSTER_PASSWORD, MONGO_DB_USERNAME } from "./config.js";
