@@ -28,8 +28,8 @@
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
+        <li><a href="#run-locally">Run Locally</a></li>
+        <li><a href="#full-deployment-to-aws-eks">Full Deployment to AWS EKS</a></li>
       </ul>
     </li>
   </ol>
@@ -75,7 +75,9 @@ For us this project was about learning how to build the basics of a MERN project
 
 <!-- GETTING STARTED -->
 
-## 🚀 Getting Started
+## Getting Started
+
+<!-- RUN LOCALLY -->
 
 ### Run Locally
 
@@ -112,7 +114,9 @@ Before you begin, ensure you have the following installed on your system:
 2. **Access the Application**
 - Open your browser and navigate to http://localhost:80
 
-### Full Deployment to AWS EKS ☁️
+<!-- FULL DEPLOYMENT TO AWS EKS -->
+
+### Full Deployment to AWS EKS
 
 #### Prerequisites
 
