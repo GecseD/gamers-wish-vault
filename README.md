@@ -122,8 +122,9 @@ Before you begin, ensure you have the following installed on your system:
 
 - [Terraform](https://developer.hashicorp.com/terraform/downloads)
 - [kubectl](https://kubernetes.io/docs/tasks/tools/)
+- [awsCLI](https://aws.amazon.com/cli/) (configured)
 - [Helm](https://helm.sh/docs/intro/install/)
-- AWS account with credentials (access key, secret key)
+- AWS account with credentials (access key, secret key, same as AWS cli)
 - MongoDB cluster connection string
 - RAWG API key
 
