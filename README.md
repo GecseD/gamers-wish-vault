@@ -5,14 +5,14 @@
   <p align="center">
     This MERN application is designed to add your favorite games to your own wishlist. Once your account is created, you can save all games into your wishlist and see useful information about thousands of games like their genres, available stores and platforms.
     <br />
-    <a href="https://github.com/CodecoolGlobal/freestyle-mern-project-react-polobence"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/GecseD/gamers-wish-vault"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/CodecoolGlobal/freestyle-mern-project-react-polobence">View Demo</a>
+    <a href="https://github.com/GecseD/gamers-wish-vault">View Demo</a>
     &middot;
-    <a href="https://github.com/CodecoolGlobal/freestyle-mern-project-react-polobence/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
+    <a href="https://github.com/GecseD/gamers-wish-vault/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
     &middot;
-    <a href="https://github.com/CodecoolGlobal/freestyle-mern-project-react-polobence/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
+    <a href="https://github.com/GecseD/gamers-wish-vault/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
   </p>
 
 <!-- TABLE OF CONTENTS -->
