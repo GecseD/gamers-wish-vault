@@ -64,13 +64,22 @@ For us this project was about learning how to build the basics of a MERN project
 [![Nodemon](https://img.shields.io/badge/Nodemon-76D04B?style=for-the-badge&logo=nodemon&logoColor=white)](https://nodemon.io/)
 [![npm](https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white)](https://www.npmjs.com/)
 
+### Deployment
+[![Terraform](https://img.shields.io/badge/Terraform-7B42BC?style=for-the-badge&logo=terraform&logoColor=white)](https://www.terraform.io/)
+[![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white)](https://kubernetes.io/)
+[![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com/)
+[![Helm](https://img.shields.io/badge/Helm-0F1326?style=for-the-badge&logo=helm&logoColor=white)](https://helm.sh/)
+
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
 
 ## 🚀 Getting Started
 
-### Prerequisites
+### Run Locally
+
+#### Prerequisites
 
 Before you begin, ensure you have the following installed on your system:
 - [Node.js](https://nodejs.org/) (v16 or higher)
@@ -81,7 +90,7 @@ Before you begin, ensure you have the following installed on your system:
   - Create a user and get the connection string
 - [RAWG api key](https://rawg.io/login?forward=developer) Create a RAWG account, and request an api key
 
-### Setup
+#### Setup
 
 1. **Clone the repository**
    ```bash
@@ -93,7 +102,7 @@ Before you begin, ensure you have the following installed on your system:
    - Copy the contents from .env.example to .env
    - Fill in your MongoDB credentials and API key
 
-### Running the Application
+#### Running the Application
 
 1. **Run the start script**
    ```bash
@@ -103,6 +112,60 @@ Before you begin, ensure you have the following installed on your system:
 2. **Access the Application**
 - Open your browser and navigate to http://localhost:80
 
+### Full Deployment to AWS EKS ☁️
+
+#### Prerequisites
+
+- [Terraform](https://developer.hashicorp.com/terraform/downloads)
+- [kubectl](https://kubernetes.io/docs/tasks/tools/)
+- [Helm](https://helm.sh/docs/intro/install/)
+- AWS account with credentials (access key, secret key)
+- MongoDB cluster connection string
+- RAWG API key
+
+#### Deployment Steps
+
+1. **Clone the repository (if not already done)**
+   ```bash
+   git clone https://github.com/GecseD/gamers-wish-vault.git
+   cd gamers-wish-vault
+   ```
+   
+2. **Configure environment variables**
+   - Copy the contents from .env.example to .env
+   - Fill in your MongoDB credentials and API key
+
+3. **Configure Terraform variables**
+   - Copy the contents from terraform/terraform.tfvars.example to terraform/terrafrom.tfvars
+   - Fill in your AWS access key and secret key credentials
+
+4. **Helm: Add NGINX ingress repo (one-time setup)**
+   ```bash
+   helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
+   helm repo update
+   ```
+
+5. **Terraform: Create the cluster**
+   ```bash
+   cd terraform/cluster
+   terraform init
+   terraform apply -var-file="../terraform.tfvars"
+   ```
+
+6. **Terraform: Deploy the app**
+   ```bash
+   cd ../app
+   terraform init
+   terraform apply -var-file="../terraform.tfvars"
+   ```
+
+7. **Get the application URL**
+   ```bash
+   kubectl get ingress -n app
+   ```
+   Copy the address of the ingress controller and open it in your browser. 
+    
+   Note: You might have to wait 1-2 minutes before the address field gets filled in.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
